@@ -57,7 +57,11 @@ public class KonkodApiTest {
     public void konkodGETTest() throws ApiException {
         String phone = "905313280240";
         List<Konkod> response = api.konkodGET(phone);
-        response.forEach(konkod -> System.out.println(konkod));
+        for (Konkod konkod: response
+             ) {
+            System.out.println(konkod);
+        }
+        //response.forEach(konkod -> System.out.println(konkod));
         Assert.assertNotNull(response);
         // TODO: test validations
     }
